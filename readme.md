@@ -5,6 +5,7 @@ When attempting to iterate over the Build tasks within a build definition there 
 ![error screenshot](issue.png) 
 
 For similar past bug reports see;
+- https://developercommunity.visualstudio.com/content/problem/195362/getfulldefinitionsasync0-does-not-populate-the-bui.html
 - https://dev.azure.com/mseng/AzureDevOps/_workitems/edit/1180374/
 - https://stackoverflow.com/questions/52205058/retrieve-the-list-of-tasks-for-build-definition-using-net-client-libraries-for
 
