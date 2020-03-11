@@ -2,7 +2,7 @@
 
 When attempting to iterate over the Build tasks within a build definition there are no accessible properties beneath Process.
 
-![Error](error.png)
+![error screenshot](issue.png) 
 
 For similar past bug reports see;
 - https://dev.azure.com/mseng/AzureDevOps/_workitems/edit/1180374/
