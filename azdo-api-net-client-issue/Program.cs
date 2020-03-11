@@ -61,17 +61,19 @@ namespace AzDOAPI
 
             //attempt 1 - uncomment below and it will not compile....
             {
-                //var buildDefinitions = await _buildClient.GetFullDefinitionsAsync(project.Id);//using GetFullDefinitionsAsync
-                //foreach (var buildDefinition in buildDefinitions)
-                //{
-                //    if (buildDefinition.Process != null && buildDefinition.Process.Phases != null)
-                //    {
-                //        foreach (var phase in buildDefinition.Process.Phases)
-                //            foreach (var step in phase.Steps)
-                //                Console.WriteLine($"taskname={step.DisplayName}");
-                //        break;//lets exit the loop early
-                //    }
-                //}
+                var buildDefinitions = await _buildClient.GetFullDefinitionsAsync(project.Id);//using GetFullDefinitionsAsync
+                foreach (var buildDefinition in buildDefinitions)
+                {
+                    //if (buildDefinition.Process != null && buildDefinition.Process.Phases != null)
+                    if (buildDefinition.Process != null && buildDefinition.Process is Microsoft.TeamFoundation.Build.WebApi.DesignerProcess designerProcess)
+                    {
+                        //foreach (var phase in buildDefinition.Process.Phases)
+                        foreach (var phase in designerProcess.Phases)
+                            foreach (var step in phase.Steps)
+                                Console.WriteLine($"taskname={step.DisplayName}");
+                        break;//lets exit the loop early
+                    }
+                }
             }
 
             //attempt 2 - uncomment and will not compile!
