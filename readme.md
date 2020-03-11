@@ -1,8 +1,13 @@
-﻿There is an issue in the .NET Client libraries for the Azure DevOps REST API.
+﻿*SOLVED
+You must to cast Process to either a DesignerProcess, DockerProcess or YamlProcess.
+Repo updated.
+
+-----------------------------------------
+
+
+There is an issue in the .NET Client libraries for the Azure DevOps REST API.
 
 When attempting to iterate over the Build tasks within a build definition there are no accessible properties beneath Process.
-
-![error screenshot](issue.png) 
 
 For similar past bug reports see;
 - https://developercommunity.visualstudio.com/content/problem/195362/getfulldefinitionsasync0-does-not-populate-the-bui.html
