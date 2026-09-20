@@ -1,4 +1,10 @@
-﻿*SOLVED
+﻿# Azure DevOps .NET Client Issue Reproduction
+
+> [!IMPORTANT]
+> This repository has been retired and is no longer maintained. It is retained for historical
+> reference and should not be treated as supported or secure production guidance.
+
+*SOLVED
 You must to cast Process to either a DesignerProcess, DockerProcess or YamlProcess.
 Repo updated.
 
